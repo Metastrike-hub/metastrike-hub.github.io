@@ -83,7 +83,9 @@
   }
 
 }
-
+.click-imagen{
+  font-family: 'GildaDisplay', serif;
+}
 /* ===== Hospedaje como texto (reemplazo de imagen) ===== */
 .hospedaje-block{
   width: min(92vw, 900px);
