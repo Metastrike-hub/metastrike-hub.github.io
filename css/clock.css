@@ -1,0 +1,121 @@
+html, body {
+  width: 100%;
+  background: #FFFBF7;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+.sector-clock{
+    height: 100vh;
+
+    background-color: #FFFBF7;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
+.gran-dia {
+    font-size: 35px;
+    font-family: 'Amoresa', sans-serif;
+} 
+
+
+
+.centered-text-hero {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-family: 'Amoresa';   
+}
+
+.responsive-image {
+      display: block;
+      width: clamp(250px, 50%, 500px);
+      height: auto;
+      margin: 0 auto;
+}
+
+
+.centered-text-hero1{
+    font-size: 24px;
+     line-height: 1.4;
+    letter-spacing: 0.5px;
+    color: #D8A1A5;
+    font-family: 'GildaDisplay';   
+}
+
+
+/* ===== HERO layout: rojo centrado, M&D fijo abajo ===== */
+.sector.sector-countdown{
+  padding-bottom: clamp(90px, 14svh, 160px);
+}
+
+/* ===== Compactar sector countdown ===== */
+
+.sector-countdown{
+  gap: 12px; /* reduce separación general */
+}
+
+/* Título grande */
+.sector-countdown h1{
+  margin: 10px 0 6px 0;
+  line-height: 1.1;
+}
+
+/* Subtítulo */
+.sector-countdown p{
+  margin: 4px 0;
+  line-height: 1.2;
+}
+
+/* Contador */
+.countdown{
+  margin: 10px 0;
+}
+
+/* Texto rosa */
+.sector-countdown .last-details{
+  margin-top: 8px;
+}
+
+/* === COUNTDOWN layout centrado y responsive === */
+.sector-countdown .timebox{
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: clamp(10px, 4vw, 48px);
+  justify-items: center;
+  align-items: end;
+  text-align: center;
+}
+
+
+.sector-countdown .time{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sector-countdown .time h2{
+  margin: 0;
+  font-size: clamp(30px, 7.5vw, 64px);
+  line-height: 1;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+}
+
+
+.sector-countdown .time p{
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.1;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+}

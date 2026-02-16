@@ -1,0 +1,19 @@
+  @font-face {
+    font-family: 'Amoresa';
+    src: url('../fonts/Amoresa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'GildaDisplay';
+    src: url('../fonts/GildaDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  } 
+
+.bottom-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

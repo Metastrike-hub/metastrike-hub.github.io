@@ -1,0 +1,92 @@
+:root{
+      --bg:#FFFBF7;
+      --dx:70%;
+      --dur:800ms;
+      --ease:cubic-bezier(.2,.8,.2,1);
+}
+    /* ===== SOBRE OVERLAY ===== */
+.intro{
+      position:fixed;
+      inset:0;
+      display:grid;
+      place-items:center;
+      background:var(--bg);
+      z-index:9999;
+}
+
+.stack{
+      position:relative;
+      width:min(520px,100vw);
+      aspect-ratio:380/676;
+    }
+/* 🔥 SELLO EN EL VÉRTICE */
+.seal-wrap{
+  position:absolute;
+
+  /* 🔥 Ajustado más al centro del cruce */
+  left: 14%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  /* 🔥 Más grande y responsivo */
+  width: clamp(120px, 24%, 180px);
+
+  z-index: 20;
+  pointer-events:none;
+
+}
+
+
+.seal{
+  width: clamp(120px, 24%, 180px);
+  height: auto;
+  display: block;
+  transform-origin: center;
+  will-change: transform;
+  animation: sealPulse 2s infinite;
+}
+
+/* Animación solo de escala, sin mover */
+@keyframes sealPulse{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.piece{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      transition:transform var(--dur) var(--ease);
+      pointer-events:none;
+}
+
+.hit{
+      position:absolute;
+      inset:0;
+      border:0;
+      background:transparent;
+      cursor:pointer;
+      z-index:10;
+}
+
+    /* Animación separación */
+.open .p1{
+      transform:translate(calc(-1 * var(--dx)),0);
+}
+.open .p2{
+      transform:translate(calc(-1 * var(--dx)),0);
+}
+.open .p3{
+      transform:translate(var(--dx),0);
+}
+
+.fade-out{
+      animation:fadeOut 400ms ease forwards;
+}
+@keyframes fadeOut{
+      to{opacity:0; transform:scale(.98);}
+}
